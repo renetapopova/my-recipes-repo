@@ -1,6 +1,6 @@
 = My Keto Pancakes Application
 :toc:
-:imagesdir: ./images
+:imagesdir: /images
 
 == Summary
 To provide some context of the use case, briefly describe who (Person/Actor/User Role, etc.) initiates this case, what is expected to happen, and how the system will react. Provide a description of what will be developed for this case in each system. Describe all specifics and constraints of the design of each case, which have not been captured.
@@ -11,7 +11,7 @@ image::{imagesdir}/Recipe_small.png[]
 
 === Add Labels and Properties
 
-image::Entities_small.png[]
+image::{imagesdir}/Entities_small.png[]
 
 === Import Them in Neo4j
 
@@ -62,14 +62,14 @@ CREATE
   (`16`)-[:`is_prepared_through` ]->(`14`)
 ```
 
-## Show All Nodes and Relationships
+=== Show All Nodes and Relationships
 
 ``` cypher
 MATCH p = (n)-->() RETURN p
 ```
 image::{imagesdir}/graph.png[]
 
-## Show Domain Schema
+=== Show Domain Schema
 
 ``` cypher
 call db.schema()
