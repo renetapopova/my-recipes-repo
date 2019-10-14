@@ -1,4 +1,4 @@
-[source,sql]
+[source,ruby]
 ----
 MATCH (n)
 DETACH DELETE n
