@@ -1,4 +1,4 @@
-[source,sql]
+[source,ruby]
 ----
 MATCH p = (n)-->() RETURN p
 ----
