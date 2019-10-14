@@ -1,19 +1,20 @@
 = My Keto Pancakes Application
 :toc:
+:toc_title: Modeling a Recipe in Few Steps
 :imagesdir: /images
 
 == Summary
-To provide some context of the use case, briefly describe who (Person/Actor/User Role, etc.) initiates this case, what is expected to happen, and how the system will react. Provide a description of what will be developed for this case in each system. Describe all specifics and constraints of the design of each case, which have not been captured.
+To provide some context of the use case, briefly describe who is this use case for, how it will be implemented, and what is expected to happen. Provide a high-level description of every step of development. Describe all specifics and constraints of the design of this use case, which have not been captured.
 
-=== Create a Pancakes Recipe Model
+== Create a Pancakes Recipe Model
 
 image::{imagesdir}/Recipe_small.png[]
 
-=== Add Labels and Properties
+== Add Labels and Properties
 
 image::{imagesdir}/Entities_small.png[]
 
-=== Import Them in Neo4j
+== Import Them in Neo4j
 
 ```cypher
 CREATE
@@ -62,14 +63,14 @@ CREATE
   (`16`)-[:`is_prepared_through` ]->(`14`)
 ```
 
-=== Show All Nodes and Relationships
+== Show All Nodes and Relationships
 
 ``` cypher
 MATCH p = (n)-->() RETURN p
 ```
 image::{imagesdir}/graph.png[]
 
-=== Show Domain Schema
+== Show Domain Schema
 
 ``` cypher
 call db.schema()
