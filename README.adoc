@@ -1,17 +1,19 @@
-# My Keto Pancakes Application
+= My Keto Pancakes Application
+:toc:
+:imagesdir: ./images
 
-## Summary
+== Summary
 To provide some context of the use case, briefly describe who (Person/Actor/User Role, etc.) initiates this case, what is expected to happen, and how the system will react. Provide a description of what will be developed for this case in each system. Describe all specifics and constraints of the design of each case, which have not been captured.
 
-### Create a Pancakes Recipe Model
+=== Create a Pancakes Recipe Model
 
 image::{imagesdir}/Recipe_small.png[]
 
-### Add Labels and Properties
+=== Add Labels and Properties
 
 image::{imagesdir}/Entities_small.png[]
 
-### Import Them in Neo4j
+=== Import Them in Neo4j
 
 ```cypher
 CREATE
