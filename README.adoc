@@ -121,4 +121,4 @@ image::{imagesdir}/ingredient_quantity.png[]
 MATCH (r:Recipe)-[:starts_with]->(i:Instruction)-[:next_instruction*]->(i1)
 RETURN r,i,i1
 ----
-image::{imagesdir}/instructions_graph.png[]
+image::{imagesdir}/Instructions_graph.png[]
