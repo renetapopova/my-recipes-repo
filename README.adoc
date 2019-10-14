@@ -2,7 +2,7 @@
 :toc:
 :toc-title:
 :imagesdir: /images
-:include: /cypher_queries
+
 
 To provide some context of the use case, briefly describe who is this use case for, how it will be implemented, and what is expected to happen. Provide a high-level description of every step of development. Describe all specifics and constraints of the design of this use case, which have not been captured.
 
@@ -16,17 +16,17 @@ image::{imagesdir}/Entities_small.png[]
 
 == Import the Graph Model in Neo4j
 
-include::{include}/create_all_nodes_rel.adoc[]
+include::/cypher_queries/create_all_nodes_rel.cypher[]
 
 == Show All Nodes and Relationships
 
-include::{include}/show_all.adoc[]
+include::/cypher_queries/show_all.cypher[]
 
 image::{imagesdir}/graph.png[]
 
 == Show Domain Schema
 
-include::{include}/show_schema.adoc[]
+include::/cypher_queries/show_schema.cypher[]
 
 image::{imagesdir}/schema.png[]
 
