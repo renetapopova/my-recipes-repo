@@ -11,7 +11,7 @@ To provide some context of the use case, briefly describe who is this use case f
 
 == Create a Pancakes Recipe Model
 
-image::{imagesdir}/Recipe_small.png[]
+image::{imagesdir}/recipe.png[]
 
 == Add Labels and Properties
 
