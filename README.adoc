@@ -11,11 +11,11 @@ To provide some context of the use case, briefly describe who is this use case f
 
 == Create a Pancakes Recipe Model
 
-image::{imagesdir}/recipe.png[]
+image::{imagesdir}/Recipe.png[]
 
 == Add Labels and Properties
 
-image::{imagesdir}/entities.png[]
+image::{imagesdir}/Entities.png[]
 
 == Import the Graph Model in Neo4j
 
@@ -25,13 +25,13 @@ include::{includedir}/create_all_nodes_rel.cypher[]
 
 include::{includedir}/show_all.cypher[]
 
-image::{imagesdir}/graph.png[]
+image::{imagesdir}/Graph.png[]
 
 == Show Domain Schema
 
 include::{includedir}/show_schema.cypher[]
 
-image::{imagesdir}/schema.png[]
+image::{imagesdir}/Schema.png[]
 
 == Let's Have Some Fun with the Data
 
