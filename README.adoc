@@ -11,7 +11,7 @@ image::{imagesdir}/Recipe_small.png[]
 
 === Add Labels and Properties
 
-image::{imagesdir}/Entities_small.png[]
+image::Entities_small.png[]
 
 === Import Them in Neo4j
 
