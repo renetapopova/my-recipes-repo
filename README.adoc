@@ -4,8 +4,8 @@
 :imagesdir: /images
 :includedir: /cypher_queries
 
-Eating is part of every home's daily life. So, being able to easily decide what you want to have for breakfast, lunch and dinner, and then, with a click, to find a recipe that complies with your current diet, is the dream of every housewife.
-This use case will showcase how by modeling recipes in Neo4j can lead to a
+Eating is a huge part of every home's daily life. So, being able to easily decide what you want to have for breakfast, lunch and dinner, and then, with a click, to find a recipe that complies with your current diet, is the dream of every housewife.
+This use case will showcase how by modeling recipes in Neo4j can
 
 To provide some context of the use case, briefly describe who is this use case for, how it will be implemented, and what is expected to happen. Provide a high-level description of every step of development. Describe all specifics and constraints of the design of this use case, which have not been captured.
 
@@ -88,10 +88,28 @@ image::{imagesdir}/schema.png[]
 
 == Let's Have Some Fun with the Data
 
-=== Show Me the Recipe Nutrition Facts
 
-=== Give Me the Recipe Ingredients
+
+=== Show Me the Nutrition Facts of the Pancakes Recipe
+
+[source, sql]
+----
+MATCH (:Recipe {name: 'Pancakes'})-[:has_nutrition_facts]->(n:Nutrition_Facts)
+RETURN n.`serving_size`,n.`calories`,n.`fat`,n.`protein`,n.`total carbs`
+----
+image::{imagesdir}/recipe_nutrition_facts.png[]
+
+
+=== Give Me the Pancakes Ingredients
+[source,sql]
+----
+MATCH (food:Food)-[:contains]->(Ingredient)
+RETURN food.name AS Food, collect(Ingredient.name) AS Ingredients
+----
+image::{imagesdir}/recipe_ingredients.png[]
 
 === Give the Quantity of Each Ingredient per Serving Size
+
+
 
 === How to Prepare Pancakes with This Recipe
