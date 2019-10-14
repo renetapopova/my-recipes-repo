@@ -13,7 +13,7 @@ Let me show you how easy it is to model a domain such as Food Recipes.
 == Step 1: Create a Pancakes Recipe Model
 [[anchor-1]]
 
-The first thing you have to do is to find a recipe that you like, and to write down its main parts. They will be your graph nodes:
+The first thing you have to do is to find a recipe that you like and to write down its main parts. They will be your graph nodes:
 
 * pancake
 * almond flour
@@ -33,11 +33,11 @@ Then, try to identify how these parts interact with each other, for example:
 * recipe has nutrition facts
 * recipe is about pancakes
 * etc.
-===============================
-*Tip*
 
-The more relationships you find, the more information you will be able to retrieve afterwards.
 ===============================
+*Tip:* The more relationships you find, the more information you will be able to retrieve afterwards.
+===============================
+
 This is how you can model a recipe.
 
 image::{imagesdir}/Recipe.png[]
@@ -130,7 +130,7 @@ image::{imagesdir}/schema.png[]
 
 == Let's See What You Can Learn from the Data
 
-You can use Cypher queries to retrieve knowledge from your data. 
+You can use Cypher queries to retrieve knowledge from your data.
 
 *You: Neo4j, show me the Nutrition Facts of the "Pancakes" recipe*
 
