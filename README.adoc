@@ -2,7 +2,10 @@
 :toc:
 :toc-title:
 :imagesdir: /images
+:includedir: /cypher_queries
 
+Eating is part of every home's daily life. So, being able to easily decide what you want to have for breakfast, lunch and dinner, and then, with a click, to find a recipe that complies with your current diet, is the dream of every housewife.
+This use case will showcase how by modeling recipes in Neo4j can lead to a
 
 To provide some context of the use case, briefly describe who is this use case for, how it will be implemented, and what is expected to happen. Provide a high-level description of every step of development. Describe all specifics and constraints of the design of this use case, which have not been captured.
 
@@ -16,26 +19,26 @@ image::{imagesdir}/Entities_small.png[]
 
 == Import the Graph Model in Neo4j
 
-include::/cypher_queries/create_all_nodes_rel.cypher[]
+include::{includedir}/create_all_nodes_rel.cypher[]
 
 == Show All Nodes and Relationships
 
-include::/cypher_queries/show_all.cypher[]
+include::{includedir}/show_all.cypher[]
 
 image::{imagesdir}/graph.png[]
 
 == Show Domain Schema
 
-include::/cypher_queries/show_schema.cypher[]
+include::{includedir}/show_schema.cypher[]
 
 image::{imagesdir}/schema.png[]
 
-== Let's Have Some Fun with That Data
+== Let's Have Some Fun with the Data
 
-=== Show me the recipe Nutrition Facts
+=== Show Me the Recipe Nutrition Facts
 
-=== Give me the recipe ingredients
+=== Give Me the Recipe Ingredients
 
-=== Give the quantity of each Ingredient per serving_size
+=== Give the Quantity of Each Ingredient per Serving Size
 
-=== How to prepare pancakes with this recipe
+=== How to Prepare Pancakes with This Recipe

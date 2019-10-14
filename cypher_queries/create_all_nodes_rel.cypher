@@ -13,7 +13,7 @@ CREATE
   (`11` :Instruction {name:'Drop the batter onto the hot pan and form into circles.',sequence:'3'}) ,
   (`12` :Instruction {name:'Cover and cook until bubbles start to form.',sequence:'4'}) ,
   (`13` :Instruction {name:'Flip and cook another until browned on the other side.',sequence:'5'}) ,
-  (`14` :Recipe {name:'Pancakes',course:'breakfast',calories:'268 kcal',prep_time:'5 min',cook_time:'15 min',servings:'6'}) ,
+  (`14` :Recipe {name:'Pancakes',suitable_for:'HFLC',course:'breakfast',calories:'268 kcal',prep_time:'5 min',cook_time:'15 min',servings:'6'}) ,
   (`15` :Nutrition_Facts {serving_size:'Amount per serving',calories:'268 kcal',fat:'23 g',protein:'9 g',`total carbs`:'6 g'}) ,
   (`16` :Ingredient :Food {name:'pancake'}) ,
   (`1`)-[:`listed_in` ]->(`14`) ,
