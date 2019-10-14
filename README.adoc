@@ -4,18 +4,21 @@
 :imagesdir: /images
 :includedir: /cypher_queries
 
-Eating is a huge part of every home's daily life. So, being able to easily decide what you want to have for breakfast, lunch and dinner, and then, with a click, to find a recipe that complies with your current diet, is the dream of every housewife.
-Now I will show how you can model and search recipes in Neo4j.
+Cooking is an integral part of every home's daily life. Being able to quickly decide what you want to have for breakfast, lunch, and dinner, and then, with a click, to find a recipe that complies with your current diet, is the dream of every family. If you want to develop an application that can make millions of people happy by saving them time for their close ones, you are in the right place.
 
-== Create a Pancakes Recipe Model
+Neo4j not only helps businesses simplify their data; it also gives them the power to store, manage, and retrieve information efficiently and flexibly.
+
+So, let me show you how easy it is to model a domain such as cooking recipies.
+
+== Step 1: Create a Pancakes Recipe Model
 
 image::{imagesdir}/Recipe.png[]
 
-== Add Labels and Properties
+== Step 2: Add Labels and Properties
 
 image::{imagesdir}/Entities.png[]
 
-== Import the Graph Model in Neo4j
+== Step 3: Import the Graph Model in Neo4j
 
 [source,sql]
 ----
@@ -66,7 +69,7 @@ CREATE
 ----
 
 
-== Show All Nodes and Relationships
+== Step 4: Show All Nodes and Relationships
 
 [source,sql]
 ----
@@ -75,7 +78,7 @@ MATCH p = (n)-->() RETURN p
 
 image::{imagesdir}/graph.png[]
 
-== Show Domain Schema
+== Step 5: Show Domain Schema
 
 [source,sql]
 ----
@@ -87,7 +90,7 @@ image::{imagesdir}/schema.png[]
 == Let's Have Some Fun with the Data
 
 
-=== Show Me the Nutrition Facts of the Pancakes Recipe
+=== Show me the Nutrition Facts of the "Pancakes" recipe
 
 [source, sql]
 ----
@@ -96,7 +99,7 @@ RETURN n.`serving_size`,n.`calories`,n.`fat`,n.`protein`,n.`total carbs`
 ----
 image::{imagesdir}/recipe_nutrition_facts.png[]
 
-=== Give Me the Pancakes Ingredients
+=== Give me the ingredients of a pancake
 [source,sql]
 ----
 MATCH (food:Food)-[:contains]->(Ingredient)
@@ -104,7 +107,7 @@ RETURN food.name AS Food, collect(Ingredient.name) AS Ingredients
 ----
 image::{imagesdir}/recipe_ingredients.png[]
 
-=== Give the Quantity of Each Ingredient
+=== Give the quantity of each ingredient
 
 [source,sql]
 ----
@@ -114,7 +117,7 @@ ORDER BY c.quantity
 ----
 image::{imagesdir}/ingredient_quantity.png[]
 
-=== How to Prepare Pancakes with This Recipe
+=== How to prepare pancakes with this recipe
 
 [source,sql]
 ----
