@@ -19,17 +19,17 @@ image::{imagesdir}/Entities.png[]
 
 == Import the Graph Model in Neo4j
 
-include::{includedir}/create_all_nodes_rel.cypher[]
+include::{includedir}/create_all_nodes_rel.adoc[]
 
 == Show All Nodes and Relationships
 
-include::{includedir}/show_all.cypher[]
+include::{includedir}/show_all.adoc[]
 
 image::{imagesdir}/graph.png[]
 
 == Show Domain Schema
 
-include::{includedir}/show_schema.cypher[]
+include::{includedir}/show_schema.adoc[]
 
 image::{imagesdir}/schema.png[]
 

@@ -1,4 +1,5 @@
-```cypher
+[source,sql]
+----
 CREATE
   (`1` :Ingredient :Food {name:'Almond Flour'}) ,
   (`2` :Ingredient :Food {name:'Coconut Flour'}) ,
@@ -43,4 +44,4 @@ CREATE
   (`16`)-[:`contains` {quantity:'1/4 tsp'} ]->(`8`) ,
   (`14`)-[:`is_about` ]->(`16`) ,
   (`16`)-[:`is_prepared_through` ]->(`14`)
-```
+----

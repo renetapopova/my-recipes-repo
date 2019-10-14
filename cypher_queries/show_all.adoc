@@ -1,3 +1,4 @@
-```cypher
+[source,sql]
+----
 MATCH p = (n)-->() RETURN p
-```
+----

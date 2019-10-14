@@ -1,3 +1,0 @@
-```cypher
-call db.schema()
-```
