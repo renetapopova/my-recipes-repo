@@ -1,4 +1,4 @@
-[source,sql]
+[source,ruby]
 ----
 CREATE
   (`1` :Ingredient :Food {name:'Almond Flour'}) ,
