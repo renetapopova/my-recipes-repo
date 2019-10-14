@@ -1,4 +1,6 @@
-# Delete all nodes and relationships
+# Delete All Nodes and Relationships
+
+## Cypher Query
 
 ``` cypher
 MATCH (n)

@@ -1,4 +1,6 @@
-# show domain schema
+# Show Domain Schema
+
+## Cypher Query
 
 ``` cypher
 call db.schema()
