@@ -52,7 +52,7 @@ image::{imagesdir}/Entities.png[]
 == Step 3: Import the Graph Model in Neo4j
 [[anchor-3]]
 
-Now, use http://www.apcjones.com/arrows/#[Arrow Tool] to create the graph model of your recipe by adding the nodes and relationships from <<anchor-1,Step 1>> and <<anchor-1,2>>. The Export Cypher option creates a query that you can use to import the graph in the Neo4j browser.
+Now, use http://www.apcjones.com/arrows/#[Arrow Tool] to create the graph model of your recipe by adding the nodes and relationships from <<anchor-1,Step 1>> and <<anchor-1,2>>. The Export Cypher option creates a query that you can use to import the graph in the Neo4j database.
 
 [source,sql]
 ----
@@ -105,7 +105,7 @@ CREATE
 == Step 4: Show All Nodes and Relationships
 [[anchor-4]]
 
-You use the following query to visualise your knowledge graph.
+Now you can visualise your graph by using the following query.
 
 [source,sql]
 ----
@@ -114,7 +114,7 @@ MATCH p = (n)-->() RETURN p
 
 image::{imagesdir}/graph.png[]
 
-If your model needs improving, follow the example in <<anchor-1,Step 3>> and modify the code in a text editor.
+If your model needs improving, follow the example in <<anchor-1,Step 3>> and modify the code in a text editor. Visualise again. Repeat. Until you like it.
 
 == Step 5: Show Domain Schema
 [[anchor-5]]
