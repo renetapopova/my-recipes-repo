@@ -15,7 +15,7 @@ image::{imagesdir}/Recipe_small.png[]
 
 == Add Labels and Properties
 
-image::{imagesdir}/Entities_small.png[]
+image::{imagesdir}/entities.png[]
 
 == Import the Graph Model in Neo4j
 
