@@ -1,6 +1,6 @@
 = Modeling Recipes in 5 Simple Steps
 :toc:
-:toc-title: Steps
+:toc-title:
 :imagesdir: /images
 
 == Summary
