@@ -25,13 +25,13 @@ include::{includedir}/create_all_nodes_rel.cypher[]
 
 include::{includedir}/show_all.cypher[]
 
-image::{imagesdir}/Graph.png[]
+image::{imagesdir}/graph.png[]
 
 == Show Domain Schema
 
 include::{includedir}/show_schema.cypher[]
 
-image::{imagesdir}/Schema.png[]
+image::{imagesdir}/schema.png[]
 
 == Let's Have Some Fun with the Data
 
