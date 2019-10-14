@@ -1,7 +1,3 @@
-# Add All Nodes and Relationships to the Database
-
-## Cypher Query
-
 ```cypher
 CREATE
   (`1` :Ingredient :Food {name:'Almond Flour'}) ,

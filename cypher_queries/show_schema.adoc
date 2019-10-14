@@ -1,7 +1,3 @@
-# Show Domain Schema
-
-## Cypher Query
-
-``` cypher
+```cypher
 call db.schema()
 ```

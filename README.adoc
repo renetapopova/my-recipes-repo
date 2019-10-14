@@ -2,8 +2,8 @@
 :toc:
 :toc-title:
 :imagesdir: /images
+:includedir: /cypher_queries
 
-== Summary
 To provide some context of the use case, briefly describe who is this use case for, how it will be implemented, and what is expected to happen. Provide a high-level description of every step of development. Describe all specifics and constraints of the design of this use case, which have not been captured.
 
 == Create a Pancakes Recipe Model
@@ -16,71 +16,26 @@ image::{imagesdir}/Entities_small.png[]
 
 == Import the Graph Model in Neo4j
 
-```cypher
-CREATE
-  (`1` :Ingredient :Food {name:'Almond Flour'}) ,
-  (`2` :Ingredient :Food {name:'Coconut Flour'}) ,
-  (`3` :Ingredient :Food {name:'Almond milk'}) ,
-  (`4` :Ingredient :Food {name:'egg'}) ,
-  (`5` :Ingredient :Food {name:'baking powder'}) ,
-  (`6` :Ingredient :Food {name:'vanilla extract'}) ,
-  (`7` :Ingredient {name:'avocado oil'}) ,
-  (`8` :Ingredient :Food {name:'sea salt'}) ,
-  (`9` :Instruction {name:'Whisk all ingredients together in a bowl until smooth.',sequence:'1'}) ,
-  (`10` :Instruction {name:'Preheat an oiled pan on the stove over medium-low to medium heat.',sequence:'2'}) ,
-  (`11` :Instruction {name:'Drop the batter onto the hot pan and form into circles.',sequence:'3'}) ,
-  (`12` :Instruction {name:'Cover and cook until bubbles start to form.',sequence:'4'}) ,
-  (`13` :Instruction {name:'Flip and cook another until browned on the other side.',sequence:'5'}) ,
-  (`14` :Recipe {name:'Pancakes',course:'breakfast',calories:'268 kcal',prep_time:'5 min',cook_time:'15 min',servings:'6'}) ,
-  (`15` :Nutrition_Facts {serving_size:'Amount per serving',calories:'268 kcal',fat:'23 g',protein:'9 g',`total carbs`:'6 g'}) ,
-  (`16` :Ingredient :Food {name:'pancake'}) ,
-  (`1`)-[:`listed_in` ]->(`14`) ,
-  (`2`)-[:`listed_in` ]->(`14`) ,
-  (`3`)-[:`listed_in` ]->(`14`) ,
-  (`4`)-[:`listed_in` ]->(`14`) ,
-  (`5`)-[:`listed_in` ]->(`14`) ,
-  (`6`)-[:`listed_in` ]->(`14`) ,
-  (`7`)-[:`listed_in` ]->(`14`) ,
-  (`8`)-[:`listed_in` ]->(`14`) ,
-  (`14`)-[:`starts_with` ]->(`9`) ,
-  (`9`)-[:`next_instruction` ]->(`10`) ,
-  (`10`)-[:`next_instruction` ]->(`11`) ,
-  (`11`)-[:`next_instruction` ]->(`12`) ,
-  (`12`)-[:`next_instruction` ]->(`13`) ,
-  (`13`)-[:`results_in` ]->(`16`),
-  (`13`)-[:`next_instruction` ]->(`11`),
-  (`14`)-[:`has_nutrition_facts` ]->(`15`),
-  (`16`)-[:`has_nutrition_facts` ]->(`15`),
-  (`16`)-[:`contains` {quantity:'1 cup'} ]->(`1`) ,
-  (`16`)-[:`contains` {quantity:'1/4 cup'} ]->(`2`) ,
-  (`16`)-[:`contains` {quantity:'1/3 cup'} ]->(`3`) ,
-  (`16`)-[:`contains` {quantity:'3'} ]->(`4`) ,
-  (`16`)-[:`contains` {quantity:'1 tsp'} ]->(`5`) ,
-  (`16`)-[:`contains` {quantity:'1 tsp'} ]->(`6`) ,
-  (`16`)-[:`contains` {quantity:'1/4 cup'} ]->(`7`) ,
-  (`16`)-[:`contains` {quantity:'1/4 tsp'} ]->(`8`) ,
-  (`14`)-[:`is_about` ]->(`16`) ,
-  (`16`)-[:`is_prepared_through` ]->(`14`)
-```
+include::{includedir}/create_all_nodes_rel.adoc[]
 
 == Show All Nodes and Relationships
 
-``` cypher
-MATCH p = (n)-->() RETURN p
-```
+include::{includedir}/show_all.adoc[]
+
 image::{imagesdir}/graph.png[]
 
 == Show Domain Schema
 
-``` cypher
-call db.schema()
-```
+include::{includedir}/show_schema.adoc[]
+
 image::{imagesdir}/schema.png[]
 
 == Let's Have Some Fun with That Data
 
-=== query 1
+=== Show me the recipe Nutrition Facts
 
-=== query 2
+=== Give me the recipe ingredients
 
-=== query 3
+=== Give the quantity of each Ingredient per serving_size
+
+=== How to prepare pancakes with this recipe

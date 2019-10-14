@@ -1,6 +1,3 @@
-# Show All Nodes and Relationships
-
-## Cypher Query
 ```cypher
 MATCH p = (n)-->() RETURN p
 ```
