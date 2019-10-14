@@ -1,0 +1,5 @@
+# show domain schema
+
+``` cypher
+call db.schema()
+```

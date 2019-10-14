@@ -1,0 +1,5 @@
+# Show all nodes and relationships
+
+```cypher
+MATCH p = (n)-->() RETURN p
+```

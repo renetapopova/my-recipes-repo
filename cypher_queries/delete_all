@@ -1,0 +1,6 @@
+# Delete all nodes and relationships
+
+``` cypher
+MATCH (n)
+DETACH DELETE n
+```
