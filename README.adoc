@@ -1,6 +1,6 @@
-= My Keto Pancakes Application
+= Modeling Recipes in 5 Simple Steps
 :toc:
-:toc_title: Modeling a Recipe in Few Steps
+:toc-title: Steps
 :imagesdir: /images
 
 == Summary
@@ -14,7 +14,7 @@ image::{imagesdir}/Recipe_small.png[]
 
 image::{imagesdir}/Entities_small.png[]
 
-== Import Them in Neo4j
+== Import the Graph Model in Neo4j
 
 ```cypher
 CREATE
@@ -76,3 +76,11 @@ image::{imagesdir}/graph.png[]
 call db.schema()
 ```
 image::{imagesdir}/schema.png[]
+
+== Let's Have Some Fun with That Data
+
+=== query 1
+
+=== query 2
+
+=== query 3
