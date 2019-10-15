@@ -4,7 +4,7 @@
 :imagesdir: /images
 :includedir: /cypher_queries
 
-Cooking is an integral part of every home’s life. Being able to quickly decide what to have for breakfast, lunch, and dinner, and with a click to find a recipe that complies with your current diet, is the dream of every family. If you want to develop an application that can make millions of people happy by saving them time for their close ones, you are in the right spot.
+Cooking is an integral part of every home life. Being able to quickly decide what to have for breakfast, lunch, and dinner, and with a click to find a recipe that complies with your current diet, is the dream of every family. If you want to develop an application that can make millions of people happy by saving them time for their close ones, you are in the right spot.
 
 With Neo4j, you can quickly graph a use case, fill it with real-world objects, and enjoy the interconnectedness of your data.
 
@@ -19,7 +19,7 @@ _sea salt_, _recipe_, _nutrition facts_, _instructions_.
 
 image::{imagesdir}/recipe_nodes.png[]
 
-Then, try to identify how these parts interact with each other, for example, _pancake contains almond flour_, _recipe has nutrition facts_, _recipe is about pancakes_, _recipe starts with instruction_, _instruction 1 is followed by instruction 2_, _the last instruction produces food_. Continue until it feels complete.
+Then, try to identify how these parts interact with each other. For example, _pancake contains almond flour_; _recipe has nutrition facts_; _recipe is about pancakes_; _recipe starts with instruction_; _instruction 1 is followed by instruction 2_; _the last instruction results in food_, etc. Continue until it feels complete.
 
 image::{imagesdir}/Recipe.png[]
 
@@ -30,7 +30,7 @@ image::{imagesdir}/Recipe.png[]
 == Step 2: Add Labels and Properties
 [[anchor-2]]
 
-When you finish defining your graph nodes and relationships, you label them and specify them by using the so-called properties. You know that pancakes are food but they can also be used for making a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship _contains_. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
+When you finish defining your graph nodes and relationships, you label them and specify them by using the so-called properties. You know that pancakes are food, but they are also used to make a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship _contains_. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
 
 Continue like this to add properties to every node of your graph.
 
