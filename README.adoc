@@ -93,7 +93,7 @@ CREATE
   (`16`)-[:`is_prepared_through` ]->(`14`)
 ----
 
-== Step 4: Show All Nodes and Relationships
+== Step 4: Visualise All Nodes and Relationships
 [[anchor-4]]
 
 You can visualise your graph by using the following query.
@@ -107,7 +107,7 @@ image::{imagesdir}/graph.png[]
 
 If your model needs improving, follow the example in <<anchor-1,Step 3>> and modify the code in a text editor. Visualise again. Repeat.
 
-== Step 5: Show Domain Schema
+== Step 5: Extract Domain Schema
 [[anchor-5]]
 
 Finally, you come to the point where you can extract your graph schema and apply it to other recipes to grow your database.
@@ -119,7 +119,7 @@ call db.schema()
 
 image::{imagesdir}/schema.png[]
 
-== Let’s See What You Can Learn from the Data
+== Enjoy Your Data Interconnectedness
 
 You can use Cypher queries to retrieve knowledge from your data.
 
