@@ -4,9 +4,9 @@
 :imagesdir: /images
 :includedir: /cypher_queries
 
-Cooking is an integral part of every home's life. Being able to quickly decide what to have for breakfast, lunch, and dinner, and with a click to find a recipe that complies with your current diet, is the dream of every family. If you want to develop an application that can make millions of people happy by saving them time for their close ones, you are in the right spot.
+Cooking is an integral part of every home’s life. Being able to quickly decide what to have for breakfast, lunch, and dinner, and with a click to find a recipe that complies with your current diet, is the dream of every family. If you want to develop an application that can make millions of people happy by saving them time for their close ones, you are in the right spot.
 
-With Neo4j, you can quickly graph a use case, fill it with real world objects, and enjoy the interconnectedness of your data.
+With Neo4j, you can quickly graph a use case, fill it with real-world objects, and enjoy the interconnectedness of your data.
 
 Let me show you how easy it is to model a domain such as Food Recipes.
 
@@ -30,19 +30,9 @@ image::{imagesdir}/Recipe.png[]
 == Step 2: Add Labels and Properties
 [[anchor-2]]
 
-When you are done with your graph nodes and relationships, you label them and define them by using the so called properties. You know that pancakes are food but they can also be used for making a cake. So, you add two labels next to _pancake_: _food_ and _ingredient_. Then, you connect the pancake to its ingredients by adding the relationship _contains_. You can further model the link by assigning the property _quantity:_ to it, which can be also related to the recipe. Then, you define the node _recipe_ by adding the following properties:
+When you finish defining your graph nodes and relationships, you label them and specify them by using the so-called properties. You know that pancakes are food but they can also be used for making a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship _contains_. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
 
-[source]
-----
-name:'Pancakes',
-suitable_for:'HFLC',
-course:'breakfast',
-calories:'268 kcal',
-prep_time:'5 min',
-cook_time:'15 min',
-servings:'6'
-----
-Continue like this until you define every node of you graph.
+Continue like this to add properties to every node of your graph.
 
 image::{imagesdir}/Entities.png[]
 
@@ -129,7 +119,7 @@ call db.schema()
 
 image::{imagesdir}/schema.png[]
 
-== Let's See What You Can Learn from the Data
+== Let’s See What You Can Learn from the Data
 
 You can use Cypher queries to retrieve knowledge from your data.
 
