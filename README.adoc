@@ -37,7 +37,7 @@ Continue like this to add properties to every node of your graph.
 image::{imagesdir}/Entities.png[]
 
 =======
-*Note:* For the example purposes, I have not added all domain connections and nodes because the graph would have become very complex.
+*Note:* For the example purposes, I have not added all domain connections and nodes because the graph would have become hardly readable.
 =======
 
 == Step 3: Import the Graph Model in Neo4j
@@ -173,3 +173,5 @@ RETURN r,i,i1
 *Neo4j:*
 
 image::{imagesdir}/Instructions_graph.png[]
+
+You just saw how easy it is to start graphing and exploring a new domain with Neo4j. Continue by adding more recipes and ingredients or use this as a reference to model your case. Enjoy!
