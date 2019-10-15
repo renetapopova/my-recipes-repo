@@ -13,7 +13,7 @@ Let me show you how easy it is to model a domain such as Food Recipes.
 == Step 1: Create a Pancakes Recipe Model
 [[anchor-1]]
 
-The first thing you have to do is to find a recipe that you like and to write down its main parts. They will be your graph nodes: _pancake_, _almond flour_,
+The first thing you have to do is to find a recipe that you like and write down its main parts. They will be your graph nodes: _pancake_, _almond flour_,
 _coconut flour_, _eggs_, _baking powder_, _vanilla extract_, _avocado oil_,
 _sea salt_, _recipe_, _nutrition facts_, _instructions_.
 
@@ -30,7 +30,7 @@ image::{imagesdir}/Recipe.png[]
 == Step 2: Add Labels and Properties
 [[anchor-2]]
 
-When you finish defining your graph nodes and relationships, you label them and specify them by using the so-called properties. You know that pancakes are food, but they are also used to make a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship [underline]#contains#. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
+When you finish defining your graph nodes, assign to them labels. For example, you know that pancakes are food, but they are also used to make a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship [.underline]#contains#. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
 
 Continue like this to add properties to every node of your graph.
 
