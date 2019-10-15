@@ -6,48 +6,49 @@
 
 Cooking is an integral part of every home's life. Being able to quickly decide what to have for breakfast, lunch, and dinner, and with a click to find a recipe that complies with your current diet, is the dream of every family. If you want to develop an application that can make millions of people happy by saving them time for their close ones, you are in the right spot.
 
-Neo4j will help you simplify your data and will give you the power to store, manage, and retrieve information efficiently and flexibly.
+With Neo4j, you can quickly graph a use case, fill it with real world objects, and enjoy the interconnectedness of your data.
 
 Let me show you how easy it is to model a domain such as Food Recipes.
 
 == Step 1: Create a Pancakes Recipe Model
 [[anchor-1]]
 
-The first thing you have to do is to find a recipe that you like and to write down its main parts. They will be your graph nodes:
+The first thing you have to do is to find a recipe that you like and to write down its main parts. They will be your graph nodes: _pancake_, _almond flour_
+_coconut flour_, _eggs_, _baking powder_, _vanilla extract_, _avocado oil_,
+_sea salt_, _recipe_, _nutrition facts_, _instructions_.
 
-* pancake
-* almond flour
-* coconut Flour
-* eggs
-* baking powder
-* vanilla extract
-* avocado oil
-* sea salt
-* recipe
-* nutrition facts
-* instructions
+image::{imagesdir}/recipe_nodes.png[]
 
-Then, try to identify how these parts interact with each other, for example:
-
-* pancake contains almond flour
-* recipe has nutrition facts
-* recipe is about pancakes
-* etc.
-
-===============================
-*Tip:* The more relationships you find, the more information you will be able to retrieve afterwards.
-===============================
-
-This is how you can model a recipe.
+Then, try to identify how these parts interact with each other, for example, _pancake contains almond flour_, _recipe has nutrition facts_, _recipe is about pancakes_, _recipe starts with instruction_, _instruction 1 is followed by instruction 2_, _the last instruction produces food_. Continue until it feels complete.
 
 image::{imagesdir}/Recipe.png[]
+
+========
+*Tip:* The more connected your model is, the more possibilities you have to traverse it.
+========
 
 == Step 2: Add Labels and Properties
 [[anchor-2]]
 
-Next, add labels and properties to the nodes and relationships. You take them from the recipe structure.
+When you are done with your graph nodes and relationships, you label them and define them by using the so called properties. You know that pancakes are food but they can also be used for making a cake. So, you add two labels next to "pancake" - "food" and "ingredient". Then, you connect the pancake to its ingredients by adding the relationship "contains". You can further model the link by assigning the property "quantity" to it, which can be also related to the recipe. Then, you define the node _recipe_ by adding the following properties to it. You can take them from the real recipe.
+
+[source]
+----
+name:'Pancakes',
+suitable_for:'HFLC',
+course:'breakfast',
+calories:'268 kcal',
+prep_time:'5 min',
+cook_time:'15 min',
+servings:'6'
+----
+Continue like this until you define every node of you graph.
 
 image::{imagesdir}/Entities.png[]
+
+=======
+*Note:* For the example purposes, I have not added all domain connections and nodes because the graph would have become very complex.
+=======
 
 == Step 3: Import the Graph Model in Neo4j
 [[anchor-3]]
