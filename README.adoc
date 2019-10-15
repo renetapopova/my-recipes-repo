@@ -30,7 +30,7 @@ image::{imagesdir}/Recipe.png[]
 == Step 2: Add Labels and Properties
 [[anchor-2]]
 
-When you finish defining your graph nodes, assign to them labels. For example, you know that pancakes are food, but they are also used to make a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship [.underline]#contains#. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
+When you finish defining your graph nodes, assign labels to them. For example, you know that pancakes are food, but they are also used to make a cake. So, you add two labels next to _pancake_: _Food_ and _Ingredient_. Then, you connect the pancake to its ingredients by adding the relationship [.underline]#contains#. You can further model the link by assigning the property `quantity:' '` to it, which can also be related to the node _recipe_. Then, you specify the nodes that have labels _Food_ and _Ingredient_ by adding the property `name:' '` to them.
 
 Continue like this to add properties to every node of your graph.
 
