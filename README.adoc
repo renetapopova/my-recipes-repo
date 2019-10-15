@@ -30,7 +30,7 @@ image::{imagesdir}/Recipe.png[]
 == Step 2: Add Labels and Properties
 [[anchor-2]]
 
-When you are done with your graph nodes and relationships, you label them and define them by using the so called properties. You know that pancakes are food but they can also be used for making a cake. So, you add two labels next to "pancake" - "food" and "ingredient". Then, you connect the pancake to its ingredients by adding the relationship "contains". You can further model the link by assigning the property "quantity" to it, which can be also related to the recipe. Then, you define the node _recipe_ by adding the following properties to it. You can take them from the real recipe.
+When you are done with your graph nodes and relationships, you label them and define them by using the so called properties. You know that pancakes are food but they can also be used for making a cake. So, you add two labels next to _pancake_: _food_ and _ingredient_. Then, you connect the pancake to its ingredients by adding the relationship _contains_. You can further model the link by assigning the property _quantity:_ to it, which can be also related to the recipe. Then, you define the node _recipe_ by adding the following properties:
 
 [source]
 ----
@@ -53,7 +53,7 @@ image::{imagesdir}/Entities.png[]
 == Step 3: Import the Graph Model in Neo4j
 [[anchor-3]]
 
-Now, use http://www.apcjones.com/arrows/#[Arrow Tool] to create the graph model of your recipe by adding the nodes and relationships from <<anchor-1,Step 1>> and <<anchor-1,2>>. The Export Cypher option creates a query that you can use to import the graph in the Neo4j database.
+Now, you can use http://www.apcjones.com/arrows/#[Arrow Tool] to create the graph model of your recipe by adding the nodes and relationships from <<anchor-1,Step 1>> and <<anchor-1,2>>. The *Export Cypher* option creates a query that you can use to import the graph in the Neo4j database.
 
 [source,sql]
 ----
