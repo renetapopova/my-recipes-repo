@@ -1,0 +1,5 @@
+[source,ruby]
+----
+MATCH (:Recipe {name: 'Pancakes'})-[:has_nutrition_facts]->(n:Nutrition_Facts)
+RETURN n.`serving_size`,n.`calories`,n.`fat`,n.`protein`,n.`total carbs`
+----

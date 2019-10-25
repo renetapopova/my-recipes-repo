@@ -1,0 +1,5 @@
+[source,ruby]
+----
+MATCH (food:Food)-[:contains]->(Ingredient)
+RETURN food.name AS Food, collect(Ingredient.name) AS Ingredients
+----

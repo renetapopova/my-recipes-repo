@@ -1,0 +1,6 @@
+[source,ruby]
+----
+MATCH (food:Food)-[c:contains]-> (i:Ingredient)
+RETURN  i.name AS Ingredient,c.quantity AS Quantity
+ORDER BY c.quantity
+----

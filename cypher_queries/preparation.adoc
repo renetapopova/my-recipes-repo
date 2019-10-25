@@ -1,0 +1,5 @@
+[source,ruby]
+----
+MATCH (r:Recipe)-[:starts_with]->(i:Instruction)-[:next_instruction*]->(i1)
+RETURN r,i,i1
+----
